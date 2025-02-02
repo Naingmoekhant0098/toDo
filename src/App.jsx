@@ -345,7 +345,10 @@ function App() {
                     className=" flex gap-3 cursor-pointer p-2 bg-green-300 mt-3 rounded-lg"
                   
                   >
-                    <div   onClick={() => setUpdateTodo(item)}>{item.text}</div>
+                   <div   onClick={() =>{
+                      setUpdateTodo(item);
+                      setUpdateText(item.text)
+                    }}>{item.text}</div>
                     <div onClick={() => deleteTodo(item.id)}>🗑️</div>
                   </div>
                 )
